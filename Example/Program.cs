@@ -8,9 +8,9 @@ namespace Example
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a Mac Adddress");
-            string mac = Console.ReadLine();
+            string Mac = Console.ReadLine();
             WakeOnLanClient WOLClient = new WakeOnLanClient();
-            WOLClient.Wake(mac);
+            WOLClient.Wake(Mac);
             Console.WriteLine("Pulse any key to exit...");
             Console.Read();
         }
