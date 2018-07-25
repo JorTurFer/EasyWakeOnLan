@@ -5,11 +5,19 @@ using System.Text.RegularExpressions;
 
 namespace WakeOnLan
 {
+    /// <summary>
+    /// Class to Send Magic Packet to Wake On Lan
+    /// </summary>
     public class WakeOnLanClient : UdpClient
     {
         public WakeOnLanClient() : base()
-        { }
+        {
+        }
 
+        /// <summary>
+        /// Wake a PC
+        /// </summary>
+        /// <param name="Mac">NIC Mac to wake</param>
         public void Wake(string Mac)
         {
             //Parse the mac
@@ -36,7 +44,7 @@ namespace WakeOnLan
                 }
             }
             //now send wake up packet
-            int reterned_value = Send(bytes, 1024);
+            Send(bytes, 1024);
         }
     }
 }
