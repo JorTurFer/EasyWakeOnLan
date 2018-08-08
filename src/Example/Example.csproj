@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WakeOnLan\WakeOnLan.csproj" />
+    <ProjectReference Include="..\EasyWakeOnLan\EasyWakeOnLan.csproj" />
   </ItemGroup>
 
 </Project>

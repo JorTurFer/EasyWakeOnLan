@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <PackageId>EasyWakeOnLan</PackageId>
+    <Authors>Jorge Turrado Ferrero</Authors>
+    <Company>Jorge Turrado FerreroJorge Turrado Ferrero</Company>
+    <Product>EasyWakeOnLan</Product>
+    <AssemblyName>EasyWakeOnLan</AssemblyName>
+    <RootNamespace>EasyWakeOnLan</RootNamespace>
+    <Description>Easy implementation of a Wake On Lan client to NET Standard</Description>
+    <Copyright>Jorge Turrado Ferrero</Copyright>
+    <PackageLicenseUrl>https://github.com/JorTurFer/WakeOnLan/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/JorTurFer/WakeOnLan</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/JorTurFer/WakeOnLan/raw/master/src/Example/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/JorTurFer/WakeOnLan</RepositoryUrl>
+    <PackageTags>WOL,WakeOnLan, Magic Packet, Magic, Packet, Lan</PackageTags>
+    <PackageReleaseNotes>Initial Version</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+</Project>

@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
 
-namespace WakeOnLan
+namespace EasyWakeOnLan
 {
     /// <summary>
     /// Class to Send Magic Packet to Wake On Lan
@@ -22,8 +22,7 @@ namespace WakeOnLan
         {
             //Parse the mac
             var MacParsed = Regex.Replace(Mac, "[-|:]", "");
-            //Connect de client
-            Connect(IPAddress.Broadcast, 40000);
+            
             //set sending bites
             int Counter = 0;
             //buffer to be send
@@ -44,7 +43,8 @@ namespace WakeOnLan
                 }
             }
             //now send wake up packet
-            Send(Bytes, 1024);
+            IPEndPoint destiny = new IPEndPoint(IPAddress.Broadcast, 40000);
+            SendAsync(Bytes, 1024, destiny);
         }
     }
 }

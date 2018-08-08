@@ -1,5 +1,5 @@
 ﻿using System;
-using WakeOnLan;
+using EasyWakeOnLan;
 
 namespace Example
 {
