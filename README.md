@@ -13,4 +13,4 @@ WOLClient.Wake(Mac);
 
 |AppVeyor|Travis|
 |--------|------|
-|[![Build status](https://ci.appveyor.com/api/projects/status/9c13yq87v5fvp006?svg=true)](https://ci.appveyor.com/project/kabestrus/wakeonlan)|[![Build Status](https://travis-ci.org/JorTurFer/WakeOnLan.svg?branch=master)](https://travis-ci.org/JorTurFer/WakeOnLan)|
+|[![Build status](https://ci.appveyor.com/api/projects/status/mqqrjcsjutr59flb?svg=true)](https://ci.appveyor.com/project/kabestrus/easywakeonlan)|[![Build Status](https://travis-ci.org/JorTurFer/EasyWakeOnLan.svg?branch=master)](https://travis-ci.org/JorTurFer/EasyWakeOnLan)|
