@@ -14,8 +14,8 @@
     <PackageProjectUrl>https://github.com/JorTurFer/EasyWakeOnLan</PackageProjectUrl>
     <PackageIconUrl>https://github.com/JorTurFer/EasyWakeOnLan/raw/master/src/Example/logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/JorTurFer/EasyWakeOnLan</RepositoryUrl>
-    <PackageTags>WOL,WakeOnLan, Magic Packet, Magic, Packet, Lan</PackageTags>
-    <PackageReleaseNotes>Initial Version</PackageReleaseNotes>
+    <PackageTags>WOL,WakeOnLan, Magic Packet, Magic, Packet, Lan, PowerRestore</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <FileVersion>2.1.0.0</FileVersion>
     <Version>2.1.0</Version>
