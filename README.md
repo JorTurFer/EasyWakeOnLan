@@ -17,7 +17,7 @@ WOLClient.Wake(Mac);
 
 ## Get it from NuGet
 [![NuGet][main-nuget-badge]][main-nuget]
-![NuGet][main-nuget-download]
+[![NuGet][main-nuget-download]][main-nuget]
 
 [main-nuget]: https://www.nuget.org/packages/EasyWakeOnLan/
 [main-nuget-badge]: https://img.shields.io/nuget/v/EasyWakeOnLan.svg
