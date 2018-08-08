@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "src\Example\Example.csproj", "{D5B43EAC-2142-483F-925A-53547666A54C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWakeOnLan", "src\EasyWakeOnLan\EasyWakeOnLan.csproj", "{2AAA13CE-9791-4EC8-B6E1-E248BB978C4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyWakeOnLan", "src\EasyWakeOnLan\EasyWakeOnLan.csproj", "{2AAA13CE-9791-4EC8-B6E1-E248BB978C4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

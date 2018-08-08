@@ -1,6 +1,6 @@
 # EasyWakeOnLan
 
-This is a little example of the usage of WakeOnLan that can be usable by including the reference to WakeOnLan.dll
+This is a little example of the usage of EasyWakeOnLan that can be usable by including the reference to EasyWakeOnLan.dll
 
 ## Usage
 ```cSharp
