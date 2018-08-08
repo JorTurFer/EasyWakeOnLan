@@ -1,6 +1,6 @@
 # EasyWakeOnLan
 
-This is a little example of the usage of EasyWakeOnLan that can be usable by including the reference to EasyWakeOnLan.dll
+This is a little example of the usage of EasyWakeOnLan that can be usable by including the reference to EasyWakeOnLan.dll and including a reference to Net Standard 1.5, but the easiest mode is including the reference to this library as nuget packet
 
 ## Usage
 ```cSharp
