@@ -10,13 +10,15 @@
     <RootNamespace>EasyWakeOnLan</RootNamespace>
     <Description>Easy implementation of a Wake On Lan client to NET Standard</Description>
     <Copyright>Jorge Turrado Ferrero</Copyright>
-    <PackageLicenseUrl>https://github.com/JorTurFer/WakeOnLan/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/JorTurFer/WakeOnLan</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/JorTurFer/WakeOnLan/raw/master/src/Example/logo.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/JorTurFer/WakeOnLan</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/JorTurFer/EasyWakeOnLan/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/JorTurFer/EasyWakeOnLan</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/JorTurFer/EasyWakeOnLan/raw/master/src/Example/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/JorTurFer/EasyWakeOnLan</RepositoryUrl>
     <PackageTags>WOL,WakeOnLan, Magic Packet, Magic, Packet, Lan</PackageTags>
     <PackageReleaseNotes>Initial Version</PackageReleaseNotes>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
 </Project>
