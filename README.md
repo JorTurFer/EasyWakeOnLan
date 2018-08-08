@@ -14,3 +14,9 @@ WOLClient.Wake(Mac);
 |AppVeyor|Travis|
 |--------|------|
 |[![Build status](https://ci.appveyor.com/api/projects/status/mqqrjcsjutr59flb?svg=true)](https://ci.appveyor.com/project/kabestrus/easywakeonlan)|[![Build Status](https://travis-ci.org/JorTurFer/EasyWakeOnLan.svg?branch=master)](https://travis-ci.org/JorTurFer/EasyWakeOnLan)|
+
+## Get it from NuGet
+[![NuGet][main-nuget-badge]][main-nuget] 
+
+[main-nuget]: https://www.nuget.org/packages/EasyWakeOnLan/
+[main-nuget-badge]: https://img.shields.io/nuget/v/EasyWakeOnLan.svg?style=flat-square&label=nuget
