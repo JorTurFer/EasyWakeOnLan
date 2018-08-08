@@ -9,7 +9,7 @@ namespace Example
         {
             Console.WriteLine("Enter a Mac Adddress");
             string Mac = Console.ReadLine();
-            WakeOnLanClient WOLClient = new WakeOnLanClient();
+            EasyWakeOnLanClient WOLClient = new EasyWakeOnLanClient();
             WOLClient.Wake(Mac);
             Console.WriteLine("Pulse any key to exit...");
             Console.Read();

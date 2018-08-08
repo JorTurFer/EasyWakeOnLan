@@ -1,4 +1,4 @@
-# WakeOnLan
+# EasyWakeOnLan
 
 This is a little example of the usage of WakeOnLan that can be usable by including the reference to WakeOnLan.dll
 
@@ -6,7 +6,7 @@ This is a little example of the usage of WakeOnLan that can be usable by includi
 ```cSharp
 string Mac = ...Get the Mac Address....
 //Instance the class
-WakeOnLanClient WOLClient = new WakeOnLanClient();
+EasyWakeOnLanClient WOLClient = new EasyWakeOnLanClient();
 //Wake the remote PC
 WOLClient.Wake(Mac);
 ```

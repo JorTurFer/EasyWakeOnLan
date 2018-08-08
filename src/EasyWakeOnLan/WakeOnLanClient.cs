@@ -8,9 +8,9 @@ namespace EasyWakeOnLan
     /// <summary>
     /// Class to Send Magic Packet to Wake On Lan
     /// </summary>
-    public class WakeOnLanClient : UdpClient
+    public class EasyWakeOnLanClient : UdpClient
     {
-        public WakeOnLanClient() : base()
+        public EasyWakeOnLanClient() : base()
         {
         }
 
