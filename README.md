@@ -17,7 +17,7 @@ string Mac = ...Get the Mac Address....
 //Instance the class
 EasyWakeOnLanClient WOLClient = new EasyWakeOnLanClient();
 //Wake the remote PC
-WOLClient.WakeAsync(Mac);
+await WOLClient.WakeAsync(Mac);
 ```
 
 ## Dependency Inyection
