@@ -7,19 +7,24 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            Process();
-        }
-        static async void Process()
-        {
             Console.WriteLine("Enter a Mac Adddress");
             string Mac = Console.ReadLine();
-            EasyWakeOnLanClient WOLClient = new EasyWakeOnLanClient();
             //Sync
-            WOLClient.Wake(Mac);
+            ProcessSync(Mac);
             //Async
-            await WOLClient.WakeAsync(Mac);
+            ProcessAsync(Mac);
             Console.WriteLine("Pulse any key to exit...");
             Console.Read();
+        }
+        static void ProcessSync(string Mac)
+        {
+            EasyWakeOnLanClient WOLClient = new EasyWakeOnLanClient();
+            WOLClient.Wake(Mac);
+        }
+        static async void ProcessAsync(string Mac)
+        {
+            EasyWakeOnLanClient WOLClient = new EasyWakeOnLanClient();
+            await WOLClient.WakeAsync(Mac);
         }
     }
 }
