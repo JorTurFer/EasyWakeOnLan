@@ -23,6 +23,7 @@ await WOLClient.WakeAsync(Mac);
 ## Dependency Inyection
 Register ```IEasyWakeOnLanCient``` using ```EasyWakeOnLanCient```
 
+## Continuous Integration
 |AppVeyor|Travis|
 |--------|------|
 |[![Build status](https://ci.appveyor.com/api/projects/status/mqqrjcsjutr59flb?svg=true)](https://ci.appveyor.com/project/kabestrus/easywakeonlan)|[![Build Status](https://travis-ci.org/JorTurFer/EasyWakeOnLan.svg?branch=master)](https://travis-ci.org/JorTurFer/EasyWakeOnLan)|
