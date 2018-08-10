@@ -21,7 +21,7 @@ await WOLClient.WakeAsync(Mac);
 ```
 
 ## Dependency Inyection
-Register IEasyWakeOnLanCient using EasyWakeOnLanCient
+Register ```IEasyWakeOnLanCient``` using ```EasyWakeOnLanCient```
 
 |AppVeyor|Travis|
 |--------|------|
