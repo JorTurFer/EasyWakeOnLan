@@ -3,7 +3,7 @@
 This is a little example of the usage of EasyWakeOnLan that can be usable by including the reference to EasyWakeOnLan.dll, but the easiest mode is including the reference to this library as nuget packet
 
 ## SourceLink
-After version 3.0.16 supports debugging with SourceLink
+After version ```3.0.16``` supports debugging with SourceLink
 ## Usage Sync
 ```cSharp
 string Mac = ...Get the Mac Address....
