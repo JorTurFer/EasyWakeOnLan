@@ -37,7 +37,7 @@ namespace EasyWakeOnLan
             IPEndPoint destiny = new IPEndPoint(IPAddress.Broadcast, 40000);
             await SendAsync(Bytes, Bytes.Length, destiny);
         }
-        private static byte[] GetBytes(string Mac)
+        private byte[] GetBytes(string Mac)
         {
             //Parse the mac
             var MacParsed = Regex.Replace(Mac, "[-|:]", "");
