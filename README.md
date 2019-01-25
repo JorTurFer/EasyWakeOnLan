@@ -26,9 +26,9 @@ await WOLClient.WakeAsync(Mac);
 Register ```IEasyWakeOnLanCient``` using ```EasyWakeOnLanCient```
 
 ## Continuous Integration
-|AppVeyor|Travis|
-|--------|------|
-|[![Build status](https://ci.appveyor.com/api/projects/status/mqqrjcsjutr59flb?svg=true)](https://ci.appveyor.com/project/kabestrus/easywakeonlan)|[![Build Status](https://travis-ci.org/JorTurFer/EasyWakeOnLan.svg?branch=master)](https://travis-ci.org/JorTurFer/EasyWakeOnLan)|
+|AppVeyor|Travis|Azure Pipelines|
+|--------|------|---------------|
+|[![Build status](https://ci.appveyor.com/api/projects/status/mqqrjcsjutr59flb?svg=true)](https://ci.appveyor.com/project/kabestrus/easywakeonlan)|[![Build Status](https://travis-ci.org/JorTurFer/EasyWakeOnLan.svg?branch=master)](https://travis-ci.org/JorTurFer/EasyWakeOnLan)|[![Build Status](https://dev.azure.com/JorTurFer/EasyWakeOnLan/_apis/build/status/JorTurFer.EasyWakeOnLan?branchName=master)](https://dev.azure.com/JorTurFer/EasyWakeOnLan/_build/latest?definitionId=3?branchName=master)|
 
 ## Get it from NuGet
 [![NuGet][main-nuget-badge]][main-nuget]
