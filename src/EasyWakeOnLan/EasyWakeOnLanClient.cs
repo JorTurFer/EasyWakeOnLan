@@ -11,6 +11,7 @@ namespace EasyWakeOnLan
     /// </summary>
     public class EasyWakeOnLanClient : UdpClient, IEasyWakeOnLanCient
     {
+        public const int Port = 40000;
         public EasyWakeOnLanClient() : base()
         {
         }
@@ -18,50 +19,52 @@ namespace EasyWakeOnLan
         /// <summary>
         /// Wake a PC
         /// </summary>
-        /// <param name="Mac">NIC Mac to wake</param>
-        public void Wake(string Mac)
+        /// <param name="mac">NIC Mac to wake</param>
+        public void Wake(string mac)
         {
-            byte[] Bytes = GetBytes(Mac);
+            var bytes = GetBytes(mac);
             //now send wake up packet
-            IPEndPoint destiny = new IPEndPoint(IPAddress.Broadcast, 40000);
-            SendAsync(Bytes, Bytes.Length, destiny);
+            var destiny = new IPEndPoint(IPAddress.Broadcast, Port);
+            SendAsync(bytes, bytes.Length, destiny);
         }
         /// <summary>
         /// Wake a PC Async
         /// </summary>
-        /// <param name="Mac">NIC Mac to wake</param>
-        public async Task WakeAsync(string Mac)
+        /// <param name="mac">NIC Mac to wake</param>
+        public async Task WakeAsync(string mac)
         {
-            byte[] Bytes = GetBytes(Mac);
+            var bytes = GetBytes(mac);
             //now send wake up packet
-            IPEndPoint destiny = new IPEndPoint(IPAddress.Broadcast, 40000);
-            await SendAsync(Bytes, Bytes.Length, destiny);
+            var destiny = new IPEndPoint(IPAddress.Broadcast, Port);
+            await SendAsync(bytes, bytes.Length, destiny);
         }
-        private byte[] GetBytes(string Mac)
+        private static byte[] GetBytes(string mac)
         {
             //Parse the mac
-            var MacParsed = Regex.Replace(Mac, "[-|:]", "");
+            var macParsed = Regex.Replace(mac, "[-|:]", "");
 
             //set sending bites
-            int Counter = 0;
+            var counter = 0;
             //buffer to be send
-            byte[] Bytes = new byte[1024];   // more than enough :-)
-                                             //first 6 bytes should be 0xFF
-            for (int y = 0; y < 6; y++)
-                Bytes[Counter++] = 0xFF;
-            //now repeate MAC 16 times
-            for (int y = 0; y < 16; y++)
+            var bytes = new byte[128];   // more than enough :-)
+                                          //first 6 bytes should be 0xFF
+            for (var y = 0; y < 6; y++)
             {
-                int i = 0;
-                for (int z = 0; z < 6; z++)
+                bytes[counter++] = 0xFF;
+            }
+            //now repeat MAC 16 times
+            for (var y = 0; y < 16; y++)
+            {
+                var i = 0;
+                for (var z = 0; z < 6; z++)
                 {
-                    Bytes[Counter++] =
-                        byte.Parse(MacParsed.Substring(i, 2),
+                    bytes[counter++] =
+                        System.Byte.Parse(macParsed.Substring(i, 2),
                         NumberStyles.HexNumber);
                     i += 2;
                 }
             }
-            return Bytes;
+            return bytes;
         }
     }
 }
