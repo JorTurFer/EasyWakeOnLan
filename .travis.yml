@@ -9,5 +9,6 @@ install:
 - dotnet restore
 script:
 - dotnet build
+- dotnet test test/EasyWakeOnLanTests/EasyWakeOnLanTests.csproj
 -notifications:
 -  email: false
