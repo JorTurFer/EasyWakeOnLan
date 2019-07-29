@@ -36,7 +36,7 @@ namespace EasyWakeOnLanTests.IntegrationTests
         public void Wake_ShouldBeExpectedResult(string mac, string expected)
         {
             _easyWakeOnLanClient.Wake(mac);
-            Thread.Sleep(10);
+            Thread.Sleep(500);
             AssertSendedUdpMessage(expected);
         }
 
@@ -46,7 +46,7 @@ namespace EasyWakeOnLanTests.IntegrationTests
         public async Task WakeAsync_ShouldBeExpectedResult(string mac, string expected)
         {
             await _easyWakeOnLanClient.WakeAsync(mac);
-            await Task.Delay(10);
+            await Task.Delay(500);
             AssertSendedUdpMessage(expected);
         }
 
