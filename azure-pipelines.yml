@@ -1,66 +1,45 @@
-# .NET Desktop
-# Build and run tests for .NET Desktop or Windows classic desktop solutions.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
-jobs:
-- job: Linux
-  pool:
-    vmImage: 'ubuntu-16.04'
+strategy:
+  matrix:
+    Ubuntu :
+      imageName: 'ubuntu-16.04'
+    High Sierra:
+      imageName: 'macos-10.13'
+    Mojave :
+      imageName: 'macos-10.14'
+    Visual Studio 2015:
+      imageName: 'vs2015-win2012r2'
+    Visual Studio 2017:
+      imageName: 'vs2017-win2016'
+    Visual Studio 2019:
+      imageName: 'windows-2019'
+
+pool:
+  vmImage: $(imageName)
     
-  variables:
-    solution: '**/*.sln'
-    buildPlatform: 'Any CPU'
+variables:
+    solution: '**/*.sln'    
+    test: '**/EasyWakeOnLanTests.csproj'
     buildConfiguration: 'Release'
 
-  steps:
-  - task: NuGetToolInstaller@0
+steps:
+- task: NuGetToolInstaller@0
 
-  - task: NuGetCommand@2
-    inputs:
-      restoreSolution: '$(solution)'
+- task: DotNetCoreInstaller@0
+  inputs:
+    version: '2.2.103'
 
-  - script: dotnet build -c '$(buildConfiguration)'
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
 
-- job: MacOS
-  pool:
-    vmImage: 'macOS-10.13'
-  
-  variables:
-    solution: '**/*.sln'
-    buildPlatform: 'Any CPU'
-    buildConfiguration: 'Release'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: build
+    projects: '$(solution)'
+    arguments: '--configuration $(buildConfiguration)' 
 
-  steps:
-  - task: NuGetToolInstaller@0
-
-  - task: NuGetCommand@2
-    inputs:
-      restoreSolution: '$(solution)'
-
-  - script: dotnet build -c '$(buildConfiguration)'
-
-- job: Windows
-  pool:
-    vmImage: 'vs2017-win2016'
-
-  variables:
-    solution: '**/*.sln'
-    buildPlatform: 'Any CPU'
-    buildConfiguration: 'Release'
-
-  steps:
-  - task: NuGetToolInstaller@0
-
-  - task: DotNetCoreInstaller@0
-    inputs:
-      version: '2.1.300'
-
-  - task: NuGetCommand@2
-    inputs:
-      restoreSolution: '$(solution)'
-
-  - task: VSBuild@1
-    inputs:
-      solution: '$(solution)'
-      platform: '$(buildPlatform)'
-      configuration: '$(buildConfiguration)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '$(test)'
+    arguments: '--configuration $(buildConfiguration)' 
